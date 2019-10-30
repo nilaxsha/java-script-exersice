@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="add"></p>
+<p id="multi"></p>
+<p id="sub"></p>
+<p id="divide"></p>
+<p id="Q5"></p>
+<p id="Q6.1"></p>
+<p id="Q6.2"></p>
+<p id="Q6.3"></p>
+<p id="Q6.4"></p>
+<button onclick="myAlert()">Click</button> <br><br>
+Length = <input type="text" id="val1" name="val1" value=""/><br>
+    Width = <input type="text" id="val2" name="val2" value=""/><br>
+    Height = <input type="text" id="val3" name="val3" value=""/><br>
+    <input type="button" name="Sumbit" value="Volume" onclick="javascript:myvolume()"/> <br>
+    Answer Volume = <input type="text" id="vol" name="vol" value=""/> <br> <br>
+
+<script>
+  // 1st question answer
+function myFunction(p1) {
+  return p1 * p1;
+}
+document.getElementById("demo").innerHTML = myFunction(4);
+
+// 2nd "a"question answer
+
+  var num1, num2, ans;
+  function addNum( num1, num2){
+    ans = num1 + num2;
+    return ans;
+  }
+  var e = addNum(4,2);
+
+  document.getElementById("add").innerHTML = e;
+//2nd "b" question
+  function multiNum( num1, num2){
+    ans = num1 * num2;
+    return ans;
+  }
+  var f = multiNum(4,2);
+  document.getElementById("multi").innerHTML = f;
+
+  function subtractNum( num1, num2){
+    ans = num1 - num2;
+    return ans;
+  }
+  var g = subtractNum(4,2);
+  document.getElementById("sub").innerHTML = g;
+
+  function divideNum( num1, num2){
+    ans = num1 - num2;
+    return ans;
+  }
+  var h = divideNum(4,2);
+  document.getElementById("divide").innerHTML = h;
+  //3rd question
+  function myAlert() {
+    alert("Hello World!");
+  }
+  //4th question
+  function myvolume() {
+var length,width,height,volume;
+length = parseInt(document.getElementById("val1").value);
+width = parseInt(document.getElementById("val2").value);
+height = parseInt(document.getElementById("val3").value);
+volume = document.getElementById("vol");
+volume.value = length * width * height;
+}
+//5th question
+var person = {firstName:"Nimal", lastName:"Raj", age:15, city:"Kandy"};
+document.getElementById("Q5").innerHTML =
+"My name is " + person["firstName"]+" " +person["lastName"] +". "+" I'm"+" "+person["age"]+" years old."+" I live in"+" "+person["city"]+".";
+//6th question
+var course = {courseName:"BIT", courseFee:"Rs 150 000", startDate:" 12.06.2018", center:" Our Office"};
+document.getElementById("Q6.1").innerHTML ="Course Name: "+course["courseName"];
+document.getElementById("Q6.2").innerHTML ="Course Fee:  "+ course["courseFee"];
+document.getElementById("Q6.3").innerHTML ="Start Date:  "+ course["startDate"];
+document.getElementById("Q6.4").innerHTML ="Center:      "+ course["center"];
+</script>
+</body>
+</html>
